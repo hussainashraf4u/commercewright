@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commerce Wright Cloud Solutions — cloud, applications, operations, security</title>
+<meta name="description" content="Commerce Wright runs cloud infrastructure, applications and security for mid-market companies that outgrew a two-person IT team. Austin and Pune. 340 endpoints under contract.">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:title" content="Commerce Wright Cloud Solutions">
+<meta property="og:description" content="Somebody has to own it at 2 a.m. Cloud, applications, operations and security for mid-market companies.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b1f2a'/><path d='M8 22V10h4l4 8 4-8h4v12' fill='none' stroke='%234fd1c5' stroke-width='2.2' stroke-linejoin='round'/></svg>">
+<link rel="preload" href="assets/fonts/librefranklin-var-100-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibmplexmono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+/* Set the theme before first paint so a remembered cyanotype choice never
+   flashes drafting-paper white on the way in. */
+(function () {
+  try {
+    var s = localStorage.getItem('cw-theme');
+    if (s !== 'light' && s !== 'dark') {
+      s = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', s);
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- icon sprite ---------------------------------------------------------- -->
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 0 0 .3-9 6 6 0 0 0-11.6 1.6A3.7 3.7 0 0 0 7 19z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M2 12h4l3 8 6-16 3 8h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 3.5v6c0 5-3.4 9.3-8 10.5-4.6-1.2-8-5.5-8-10.5v-6z"/><path d="M9 12l2 2 4-4"/></symbol>
+</defs></svg>
+
+
+<!-- 00 · nav -------------------------------------------------------------- -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top" aria-label="Commerce Wright Cloud Solutions, back to top">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="2"/><path d="M8 22V10h4l4 8 4-8h4v12"/></svg>
+      <span class="brand__text">
+        <b>Commerce Wright</b>
+        <i>Cloud Solutions</i>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#breaks">Where it breaks</a>
+      <a href="#benches">What we run</a>
+      <a href="#process">How we work</a>
+      <a href="#proof">Proof</a>
+      <a href="#pricing">What it costs</a>
+    </nav>
+
+    <div class="nav__end">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to cyanotype (dark) theme">
+        <svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="ico ico--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm magnetic" href="#contact">
+        <span class="btn__long">Book a systems review</span>
+        <span class="btn__short">Book a review</span>
+        <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="nav__rule"><span class="nav__progress" id="navProgress"></span></div>
+</header>
+
+
+<main id="main">
+<span id="top"></span>
+
+<!-- 01 · hero ------------------------------------------------------------- -->
+<section class="hero" id="hero">
+  <div class="gridfield" aria-hidden="true"><span class="gridfield__layer"></span></div>
+
+  <div class="shell hero__inner">
+    <div class="hero__copy">
+      <p class="label label--accent">
+        <span class="tick"></span>Est. 2014 &nbsp;/&nbsp; Austin, TX &nbsp;·&nbsp; Pune, IN
+      </p>
+
+      <h1 class="hero__h1 js-split">Somebody has to own it at 2&nbsp;a.m.</h1>
+
+      <p class="hero__lede reveal">
+        Commerce Wright runs the cloud infrastructure, the applications on top of it, and the
+        security around both — for companies that outgrew a two-person IT team and can't yet
+        justify twenty. Three hundred and forty endpoints under contract. One phone number.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary magnetic" href="#contact">
+          Book a systems review
+          <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#pricing">See what we charge &mdash; before you talk to us</a>
+      </div>
+
+      <dl class="hero__stats reveal">
+        <div><dt>Trailing 12-mo uptime</dt><dd><span class="num" data-count="99.98" data-dec="2">99.98</span><span class="unit">%</span></dd></div>
+        <div><dt>Median P1 first response</dt><dd><span class="num" data-count="11">11</span><span class="unit">min</span></dd></div>
+        <div><dt>Clients lost in 2025</dt><dd><span class="num" data-count="0">0</span></dd></div>
+      </dl>
+    </div>
+
+    <figure class="hero__figure" id="heroFigure">
+      <figcaption class="label drawing-title">
+        <span>Fig. 01</span> Reference estate &mdash; retail, 3 regions
+      </figcaption>
+
+      <svg class="schematic schematic--hero" viewBox="0 0 520 500" role="img"
+           aria-label="Schematic of a reference cloud estate: edge and CDN feeding a load balancer, which splits to application nodes and a worker pool, both writing to a primary database with a read replica, with backup to object storage and an observability plane.">
+        <g class="sch-grid" aria-hidden="true">
+          <path class="sch-hair" d="M0 0v500M104 0v500M208 0v500M312 0v500M416 0v500M520 0v500"/>
+          <path class="sch-hair" d="M0 0h520M0 100h520M0 200h520M0 300h520M0 400h520M0 500h520"/>
+        </g>
+
+        <!-- dimension line -->
+        <g class="sch-dim draw">
+          <path d="M22 34v432M16 34h12M16 466h12"/>
+        </g>
+        <text class="sch-dimtext" x="14" y="252" transform="rotate(-90 14 252)">3 AVAILABILITY ZONES</text>
+
+        <!-- nodes -->
+        <g class="sch-node draw"><rect x="170" y="28" width="180" height="46" rx="2"/></g>
+        <text class="sch-lab" x="260" y="49">EDGE / CDN</text>
+        <text class="sch-sub" x="260" y="63">96 POPs · WAF</text>
+
+        <g class="sch-node sch-node--live draw"><rect x="170" y="120" width="180" height="46" rx="2"/></g>
+        <text class="sch-lab" x="260" y="141">LOAD BALANCER</text>
+        <text class="sch-sub" x="260" y="155">p95 780ms</text>
+
+        <g class="sch-node draw"><rect x="52" y="212" width="164" height="50" rx="2"/></g>
+        <text class="sch-lab" x="134" y="233">APP NODES ×6</text>
+        <text class="sch-sub" x="134" y="247">autoscale 4–18</text>
+
+        <g class="sch-node draw"><rect x="304" y="212" width="164" height="50" rx="2"/></g>
+        <text class="sch-lab" x="386" y="233">WORKER POOL</text>
+        <text class="sch-sub" x="386" y="247">queue depth &lt; 40</text>
+
+        <g class="sch-node draw"><rect x="108" y="306" width="176" height="50" rx="2"/></g>
+        <text class="sch-lab" x="196" y="327">POSTGRES · PRIMARY</text>
+        <text class="sch-sub" x="196" y="341">us-east-1a</text>
+
+        <g class="sch-node draw"><rect x="322" y="306" width="140" height="50" rx="2"/></g>
+        <text class="sch-lab" x="392" y="327">REPLICA</text>
+        <text class="sch-sub" x="392" y="341">lag 240ms</text>
+
+        <g class="sch-node draw"><rect x="52" y="400" width="176" height="46" rx="2"/></g>
+        <text class="sch-lab" x="140" y="421">BACKUP TO OBJECT</text>
+        <text class="sch-sub" x="140" y="435">35-day retention</text>
+
+        <g class="sch-node draw"><rect x="284" y="400" width="184" height="46" rx="2"/></g>
+        <text class="sch-lab" x="376" y="421">OBSERVABILITY</text>
+        <text class="sch-sub" x="376" y="435">logs · traces · SLO</text>
+
+        <!-- connectors -->
+        <g class="sch-link draw">
+          <path d="M260 74v46"/>
+          <path d="M260 166v22H134v24"/>
+          <path d="M260 166v22h126v24"/>
+          <path d="M134 262v22h62v22"/>
+          <path d="M386 262v22h-90v22"/>
+          <path d="M284 331h38"/>
+          <path d="M196 356v22h-56v22"/>
+          <path d="M392 356v22h-16v22"/>
+        </g>
+
+        <!-- annotation -->
+        <g class="sch-note draw">
+          <path d="M350 143h64v-28"/>
+          <circle cx="350" cy="143" r="3"/>
+        </g>
+        <text class="sch-note-text" x="420" y="112">TLS TERM.</text>
+        <text class="sch-note-text" x="420" y="126">CERT AUTO-ROTATE</text>
+      </svg>
+
+      <span class="crosshair" id="crosshair" aria-hidden="true"><i></i><b></b></span>
+    </figure>
+  </div>
+</section>
+
+
+<!-- 02 · under contract --------------------------------------------------- -->
+<section class="strip" aria-label="Clients and certifications">
+  <div class="shell strip__head">
+    <p class="label">Under contract</p>
+    <p class="strip__note">Named with permission. Four more are under NDA and we won't pretend otherwise.</p>
+  </div>
+  <div class="marquee" id="marquee">
+    <ul class="marquee__row">
+      <li>Halstead Outdoor</li><li>Portway Logistics</li><li>Merit Dental Group</li>
+      <li>Cavalier Foods</li><li>Ridgeline Property Co.</li><li>Baxter &amp; Lowe</li>
+      <li aria-hidden="true">Halstead Outdoor</li><li aria-hidden="true">Portway Logistics</li><li aria-hidden="true">Merit Dental Group</li>
+      <li aria-hidden="true">Cavalier Foods</li><li aria-hidden="true">Ridgeline Property Co.</li><li aria-hidden="true">Baxter &amp; Lowe</li>
+    </ul>
+  </div>
+  <div class="shell certs">
+    <span class="cert">AWS Advanced Tier Services Partner</span>
+    <span class="cert">Microsoft Solutions Partner &mdash; Infrastructure (Azure)</span>
+    <span class="cert">SOC 2 Type II &mdash; audited annually</span>
+    <span class="cert">ISO/IEC 27001:2022</span>
+  </div>
+</section>
+
+
+<!-- definition ------------------------------------------------------------ -->
+<aside class="define" aria-label="On the name">
+  <div class="shell define__inner reveal">
+    <p class="define__word">wright <em>/rīt/</em> <span>noun</span></p>
+    <p class="define__body">
+      A maker or builder. Survives now only in compounds — wheelwright, shipwright, playwright.
+      Archaic, and we know it. We kept it because the job description hasn't actually changed:
+      someone draws the thing, someone builds the thing, and someone stays on afterward to keep it
+      running. Most firms sell you the first two.
+    </p>
+  </div>
+</aside>
+
+
+<!-- 03 · where it breaks -------------------------------------------------- -->
+<section class="section breaks" id="breaks">
+  <div class="shell">
+    <header class="sec-head">
+      <p class="label"><span class="tick"></span>011 &mdash; Where it breaks</p>
+      <h2 class="sec-h2 reveal">Nothing fails at 10 a.m. on a Tuesday.</h2>
+      <p class="sec-lede reveal">
+        Three situations we get called into more than any others. If you recognise your own
+        estate in one of them, that's the conversation to have.
+      </p>
+    </header>
+
+    <ol class="breaks__list">
+      <li class="brk reveal">
+        <span class="brk__no">01</span>
+        <div class="brk__body">
+          <h3>The certificate nobody renewed</h3>
+          <p>
+            Friday, 6:40 p.m. A wildcard cert expires. Checkout starts returning TLS errors, the
+            status page is green because it only pings the marketing site, and the person who
+            originally requested that cert left in 2023. It takes ninety minutes to find out
+            which registrar it even lives at.
+          </p>
+          <p class="brk__mark">What it actually costs: one evening of revenue, and every customer who tried once.</p>
+        </div>
+      </li>
+
+      <li class="brk reveal">
+        <span class="brk__no">02</span>
+        <div class="brk__body">
+          <h3>The bucket nobody owned</h3>
+          <p>
+            A SOC 2 auditor asks who has access to production Terraform state. The state file
+            turns out to be in an S3 bucket a contractor created in 2019 — no versioning, no
+            owner tag, no MFA delete, and permissions granted to a group that still contains two
+            former employees. Nobody did anything wrong. Nobody did anything, is the problem.
+          </p>
+          <p class="brk__mark">This is the finding that delays your certification by a quarter.</p>
+        </div>
+      </li>
+
+      <li class="brk reveal">
+        <span class="brk__no">03</span>
+        <div class="brk__body">
+          <h3>The upgrade nobody scheduled</h3>
+          <p>
+            Your ERP hits end-of-support. The security patch you need only ships for the next
+            major version, and that version breaks the four integrations someone wrote against
+            an undocumented API. What should have been a maintenance window becomes a
+            nine-month project with a hard deadline set by somebody else's release calendar.
+          </p>
+          <p class="brk__mark">Deferred maintenance is a loan. The interest is paid in weekends.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+<!-- 04 · benches ---------------------------------------------------------- -->
+<section class="section benches" id="benches">
+  <div class="shell">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="label"><span class="tick"></span>022 &mdash; What we run</p>
+        <h2 class="sec-h2 reveal">Four benches, one contract.</h2>
+      </div>
+      <p class="sec-lede reveal">
+        Most companies our size hire four vendors for this and spend the difference on
+        coordinating them. Pick a bench to see how it wires together.
+      </p>
+    </header>
+
+    <div class="benches__grid">
+      <div class="benchtabs" role="tablist" aria-label="Service areas">
+        <button class="benchtab is-active" role="tab" id="tab-cloud" aria-selected="true" aria-controls="panel-cloud">
+          <svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg>
+          <span class="benchtab__no">01</span>
+          <span class="benchtab__name">Cloud &amp; Infrastructure</span>
+        </button>
+        <button class="benchtab" role="tab" id="tab-apps" aria-selected="false" aria-controls="panel-apps" tabindex="-1">
+          <svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>
+          <span class="benchtab__no">02</span>
+          <span class="benchtab__name">Application Engineering</span>
+        </button>
+        <button class="benchtab" role="tab" id="tab-ops" aria-selected="false" aria-controls="panel-ops" tabindex="-1">
+          <svg class="ico" aria-hidden="true"><use href="#i-pulse"/></svg>
+          <span class="benchtab__no">03</span>
+          <span class="benchtab__name">Managed Operations</span>
+        </button>
+        <button class="benchtab" role="tab" id="tab-sec" aria-selected="false" aria-controls="panel-sec" tabindex="-1">
+          <svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>
+          <span class="benchtab__no">04</span>
+          <span class="benchtab__name">Security &amp; Compliance</span>
+        </button>
+      </div>
+
+      <div class="benchstage">
+        <!-- panel 1 : itemised list -->
+        <div class="benchpanel is-active" id="panel-cloud" role="tabpanel" aria-labelledby="tab-cloud" tabindex="0">
+          <figure class="bench-fig">
+          <figcaption class="label drawing-title"><span>Fig. 02</span> Colo exit &mdash; target topology</figcaption>
+          <svg class="schematic schematic--bench" viewBox="0 0 460 250" aria-hidden="true">
+            <g class="sch-node draw"><rect x="14" y="94" width="118" height="60" rx="2"/></g>
+            <text class="sch-lab" x="73" y="118">ON-PREM</text><text class="sch-sub" x="73" y="133">11 VMs · colo</text>
+            <g class="sch-link draw"><path d="M132 124h58"/><path d="M178 118l12 6-12 6"/></g>
+            <g class="sch-node sch-node--live draw"><rect x="190" y="80" width="118" height="88" rx="2"/></g>
+            <text class="sch-lab" x="249" y="110">LANDING</text><text class="sch-lab" x="249" y="126">ZONE</text>
+            <text class="sch-sub" x="249" y="144">Terraform · OIDC</text>
+            <g class="sch-link draw"><path d="M308 106h44v-46h94"/><path d="M308 124h44"/><path d="M308 142h44v46h94"/></g>
+            <g class="sch-node draw"><rect x="352" y="40" width="94" height="40" rx="2"/></g>
+            <text class="sch-lab" x="399" y="65">PROD</text>
+            <g class="sch-node draw"><rect x="352" y="104" width="94" height="40" rx="2"/></g>
+            <text class="sch-lab" x="399" y="129">STAGE</text>
+            <g class="sch-node draw"><rect x="352" y="168" width="94" height="40" rx="2"/></g>
+            <text class="sch-lab" x="399" y="193">SANDBOX</text>
+            <g class="sch-dim draw"><path d="M14 226h432M14 220v12M446 220v12"/></g>
+            <text class="sch-dimtext" x="230" y="243">TYPICAL MIGRATION — 9 TO 22 WEEKS</text>
+          </svg>
+          </figure>
+
+          <div class="bench-copy">
+            <h3>We move estates that can't afford to be down while they move.</h3>
+            <ul class="ticklist">
+              <li>AWS and Azure landing zones — accounts, guardrails, SSO, tagging that survives an audit</li>
+              <li>Terraform everywhere, reviewed in pull requests, no console cowboys</li>
+              <li>Colo and datacentre exits, including the servers nobody has logged into since 2021</li>
+              <li>Kubernetes where it earns its keep, plain VMs and managed services where it doesn't</li>
+              <li>FinOps — we cut Portway's monthly bill 57% and then showed them how to keep it there</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- panel 2 : stat + prose -->
+        <div class="benchpanel" id="panel-apps" role="tabpanel" aria-labelledby="tab-apps" tabindex="0" hidden>
+          <figure class="bench-fig">
+          <figcaption class="label drawing-title"><span>Fig. 03</span> Integration surface &mdash; legacy wrapped</figcaption>
+          <svg class="schematic schematic--bench" viewBox="0 0 460 250" aria-hidden="true">
+            <g class="sch-node draw"><rect x="14" y="30" width="130" height="46" rx="2"/></g>
+            <text class="sch-lab" x="79" y="58">STOREFRONT</text>
+            <g class="sch-node draw"><rect x="14" y="102" width="130" height="46" rx="2"/></g>
+            <text class="sch-lab" x="79" y="130">ADMIN / OMS</text>
+            <g class="sch-node draw"><rect x="14" y="174" width="130" height="46" rx="2"/></g>
+            <text class="sch-lab" x="79" y="202">PARTNER API</text>
+            <g class="sch-link draw"><path d="M144 53h56v72"/><path d="M144 125h56"/><path d="M144 197h56v-72"/></g>
+            <g class="sch-node sch-node--live draw"><rect x="200" y="100" width="110" height="50" rx="2"/></g>
+            <text class="sch-lab" x="255" y="122">GATEWAY</text><text class="sch-sub" x="255" y="137">contract-tested</text>
+            <g class="sch-link draw"><path d="M310 125h40v-52h96"/><path d="M310 125h40v52h96"/></g>
+            <g class="sch-node draw"><rect x="350" y="52" width="96" height="42" rx="2"/></g>
+            <text class="sch-lab" x="398" y="78">ERP</text>
+            <g class="sch-node draw"><rect x="350" y="156" width="96" height="42" rx="2"/></g>
+            <text class="sch-lab" x="398" y="182">WMS</text>
+            <g class="sch-note draw"><path d="M398 198v22h-58"/><circle cx="398" cy="198" r="3"/></g>
+            <text class="sch-note-text" x="334" y="224">VENDOR EOL — WRAPPED, NOT REWRITTEN</text>
+          </svg>
+          </figure>
+
+          <div class="bench-copy">
+            <h3>Most of this work is integration, and integration is where the bodies are buried.</h3>
+            <p>
+              We write .NET, Node and Python, and we spend more time reading other people's code
+              than writing our own. The usual job is a system that works but can't be changed
+              safely: no tests, one deploy script, and an integration held together by a scheduled
+              task on a machine under someone's desk.
+            </p>
+            <p class="bench-stat">
+              <b class="num" data-count="4.1" data-dec="1">4.1</b><span class="unit">s</span>
+              <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg>
+              <b class="num accent" data-count="780">780</b><span class="unit">ms</span>
+              <em>Halstead checkout p95, without replatforming</em>
+            </p>
+          </div>
+        </div>
+
+        <!-- panel 3 : SLA table -->
+        <div class="benchpanel" id="panel-ops" role="tabpanel" aria-labelledby="tab-ops" tabindex="0" hidden>
+          <figure class="bench-fig">
+          <figcaption class="label drawing-title"><span>Fig. 04</span> Coverage model &mdash; two regions</figcaption>
+          <svg class="schematic schematic--bench" viewBox="0 0 460 250" aria-hidden="true">
+            <g class="sch-node sch-node--live draw"><rect x="160" y="98" width="140" height="56" rx="2"/></g>
+            <text class="sch-lab" x="230" y="122">FOLLOW-THE-SUN</text><text class="sch-sub" x="230" y="138">AUS 06:00–18:00 · PNQ 18:00–06:00</text>
+            <g class="sch-link draw">
+              <path d="M160 126H86v-62h-40"/><path d="M160 126H86v62h-40"/>
+              <path d="M300 126h74v-62h40"/><path d="M300 126h74v62h40"/>
+            </g>
+            <g class="sch-node draw"><rect x="14" y="44" width="72" height="40" rx="2"/></g><text class="sch-lab" x="50" y="69">AGENTS</text>
+            <g class="sch-node draw"><rect x="14" y="168" width="72" height="40" rx="2"/></g><text class="sch-lab" x="50" y="193">SYNTHETIC</text>
+            <g class="sch-node draw"><rect x="374" y="44" width="72" height="40" rx="2"/></g><text class="sch-lab" x="410" y="69">PAGE</text>
+            <g class="sch-node draw"><rect x="374" y="168" width="72" height="40" rx="2"/></g><text class="sch-lab" x="410" y="193">TICKET</text>
+            <g class="sch-dim draw"><path d="M160 176v46M300 176v46M160 222h140"/></g>
+            <text class="sch-dimtext" x="230" y="240">MEDIAN P1 FIRST RESPONSE — 11 MIN</text>
+          </svg>
+          </figure>
+
+          <div class="bench-copy">
+            <h3>The unglamorous half. It is also the half you actually buy.</h3>
+            <p>
+              Monitoring you didn't configure, patches applied on a schedule you approved, backups
+              that get restored on purpose every quarter so the first real restore isn't the first
+              restore.
+            </p>
+            <table class="sla">
+              <caption class="visually-hidden">Service level targets by severity</caption>
+              <thead><tr><th scope="col">Severity</th><th scope="col">First response</th><th scope="col">Target resolution</th></tr></thead>
+              <tbody>
+                <tr><td><b>P1</b> Production down</td><td>15 min</td><td>4 h</td></tr>
+                <tr><td><b>P2</b> Degraded / no workaround</td><td>1 h</td><td>1 business day</td></tr>
+                <tr><td><b>P3</b> Single user blocked</td><td>4 h</td><td>3 business days</td></tr>
+                <tr><td><b>P4</b> Request / change</td><td>1 business day</td><td>scheduled</td></tr>
+              </tbody>
+            </table>
+            <p class="bench-foot">Contracted targets. Measured median for P1 was 11 minutes across 2025 — we publish both numbers because only one of them is a promise.</p>
+          </div>
+        </div>
+
+        <!-- panel 4 : quote + list -->
+        <div class="benchpanel" id="panel-sec" role="tabpanel" aria-labelledby="tab-sec" tabindex="0" hidden>
+          <figure class="bench-fig">
+          <figcaption class="label drawing-title"><span>Fig. 05</span> Control plane &mdash; identity first</figcaption>
+          <svg class="schematic schematic--bench" viewBox="0 0 460 250" aria-hidden="true">
+            <g class="sch-node draw"><rect x="150" y="26" width="160" height="42" rx="2"/></g>
+            <text class="sch-lab" x="230" y="52">IDENTITY · SSO / MFA</text>
+            <g class="sch-link draw"><path d="M230 68v28"/></g>
+            <g class="sch-node sch-node--live draw"><rect x="150" y="96" width="160" height="46" rx="2"/></g>
+            <text class="sch-lab" x="230" y="118">POLICY BOUNDARY</text><text class="sch-sub" x="230" y="133">least privilege · reviewed 2×/yr</text>
+            <g class="sch-link draw"><path d="M150 119H74v52"/><path d="M310 119h76v52"/><path d="M230 142v29"/></g>
+            <g class="sch-node draw"><rect x="16" y="171" width="116" height="42" rx="2"/></g><text class="sch-lab" x="74" y="197">EDR · 340 EP</text>
+            <g class="sch-node draw"><rect x="172" y="171" width="116" height="42" rx="2"/></g><text class="sch-lab" x="230" y="197">LOG PIPELINE</text>
+            <g class="sch-node draw"><rect x="328" y="171" width="116" height="42" rx="2"/></g><text class="sch-lab" x="386" y="197">IR RUNBOOK</text>
+            <g class="sch-note draw"><path d="M386 213v20h-70"/><circle cx="386" cy="213" r="3"/></g>
+            <text class="sch-note-text" x="310" y="237">TABLETOP — QUARTERLY</text>
+          </svg>
+          </figure>
+
+          <div class="bench-copy">
+            <h3>Compliance is the paperwork. Security is whether the paperwork was true.</h3>
+            <blockquote class="pull">
+              <p>“The tabletop was the part I resented paying for. Then we had a real one in March and everybody already knew who to call.”</p>
+              <footer>Operations Director, Merit Dental Group</footer>
+            </blockquote>
+            <ul class="ticklist">
+              <li>SOC 2, ISO 27001, HIPAA and PCI-DSS readiness — we do the evidence collection, not just the gap analysis</li>
+              <li>Identity first: SSO, conditional access, and a quarterly review that actually removes people</li>
+              <li>Incident response retainer with a named responder and a quarterly tabletop we run, not a PDF we send</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 05 · process (pinned) -------------------------------------------------- -->
+<section class="process" id="process">
+  <div class="process__pin" id="processPin">
+
+    <p class="process__sheet label">
+      <span><span class="tick"></span>033 &mdash; How we work</span>
+      <em aria-hidden="true">Sheet 3 of 4 &nbsp;·&nbsp; scroll to advance <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow"/></svg></em>
+    </p>
+
+    <div class="process__track" id="processTrack">
+
+      <div class="process__intro">
+        <h2 class="sec-h2">Survey. Drawing.<br>Build. Watch.</h2>
+        <p class="sec-lede">
+          Borrowed from people who build things that hold weight. Every stage produces a document
+          you keep, whether or not you keep us.
+        </p>
+      </div>
+
+      <article class="step">
+        <p class="step__no">01</p>
+        <p class="step__dur">Two weeks · fixed fee</p>
+        <h3>Survey</h3>
+        <p>
+          We inventory what you have — including the parts that aren't documented, which is
+          usually the interesting half. Every server, every subscription, every SaaS tool
+          somebody expensed, every certificate and when it expires.
+        </p>
+        <p class="step__out"><span>You get</span> An asset register, a network diagram that matches reality, and a risk list ranked by blast radius rather than by how loud the vendor was.</p>
+        <p class="step__aside">If you decide we're not the right firm after this, you keep all of it. That has happened four times and it was the correct outcome each time.</p>
+      </article>
+
+      <article class="step">
+        <p class="step__no">02</p>
+        <p class="step__dur">Three weeks</p>
+        <h3>Drawing</h3>
+        <p>
+          Target architecture, migration sequence, and a cost model with the assumptions written
+          down so you can argue with them. We sequence around your calendar — nobody migrates a
+          warehouse system in Q4.
+        </p>
+        <p class="step__out"><span>You get</span> A runbook. Actual commands, actual rollback steps, actual owners. Not a slide deck with a cloud icon on it.</p>
+      </article>
+
+      <article class="step">
+        <p class="step__no">03</p>
+        <p class="step__dur">Six to twenty weeks</p>
+        <h3>Build</h3>
+        <p>
+          Two-week increments, demoed to whoever will have to live with it. Infrastructure lands
+          as reviewed Terraform. Every cutover gets rehearsed against a copy first — the first
+          time we run a migration is never the real time.
+        </p>
+        <p class="step__out"><span>You get</span> Working systems, the code that built them, and a burn-down that is honest about the weeks it slipped.</p>
+      </article>
+
+      <article class="step">
+        <p class="step__no">04</p>
+        <p class="step__dur">Ongoing · monthly</p>
+        <h3>Watch</h3>
+        <p>
+          Monitoring, patching, backup verification, helpdesk. A thirty-minute service review
+          each month with the same engineer, not an account manager reading a dashboard he saw
+          for the first time in the car park.
+        </p>
+        <p class="step__out"><span>You get</span> A monthly report with the ugly numbers left in, and a rolling twelve-month roadmap that gets revised in front of you every quarter.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 06 · proof ------------------------------------------------------------- -->
+<section class="section proof" id="proof">
+  <div class="shell">
+    <header class="sec-head">
+      <p class="label"><span class="tick"></span>044 &mdash; Proof</p>
+      <h2 class="sec-h2 reveal">Three jobs, with the constraint that made each one hard.</h2>
+    </header>
+
+    <div class="proof__grid">
+      <article class="case reveal">
+        <p class="case__meta">Halstead Outdoor &middot; DTC retail &middot; 210 staff</p>
+        <h3>Peak season, on the platform they already had</h3>
+        <p class="case__constraint"><span>Constraint</span> Nine weeks to Black Friday. Replatforming was off the table and everyone knew it.</p>
+        <p>
+          We profiled the checkout instead of rebuilding it. Two N+1 queries, an uncached
+          shipping-rate call to a partner API, and session state pinned to a single node. Three
+          weeks of work, one week of load testing at 14× the prior year's peak.
+        </p>
+        <dl class="case__nums">
+          <div><dt>Checkout p95</dt><dd>4.1s <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow"/></svg> <b>780ms</b></dd></div>
+          <div><dt>Peak-day errors</dt><dd>2.7% <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow"/></svg> <b>0.04%</b></dd></div>
+        </dl>
+      </article>
+
+      <article class="case reveal">
+        <p class="case__meta">Portway Logistics &middot; Freight brokerage &middot; 3 depots</p>
+        <h3>Out of a failing colo in nine weeks</h3>
+        <p class="case__constraint"><span>Constraint</span> A warehouse system the vendor stopped supporting in 2022, running on Server 2012.</p>
+        <p>
+          Eleven VMs to Azure. We didn't modernise the WMS — we isolated it, wrapped its
+          integrations behind a gateway we could test, and left it alone. Unglamorous, and it
+          shipped. Modernising it is on next year's roadmap, where it belongs.
+        </p>
+        <dl class="case__nums">
+          <div><dt>Monthly infra</dt><dd>$18,400 <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow"/></svg> <b>$7,900</b></dd></div>
+          <div><dt>Unplanned downtime, 12 mo since</dt><dd><b>26 min</b></dd></div>
+        </dl>
+      </article>
+
+      <article class="case reveal">
+        <p class="case__meta">Merit Dental Group &middot; Healthcare &middot; 34 clinics</p>
+        <h3>Testing the restore before somebody else did</h3>
+        <p class="case__constraint"><span>Constraint</span> Thirty-four sites, HIPAA, and not one full-time IT person at any of them.</p>
+        <p>
+          The backups had been "running" for three years. Nobody had restored one. First full
+          rehearsal took thirty-one hours and surfaced two clinics that weren't being backed up
+          at all. Fourth rehearsal took two hours forty. We now run one every quarter.
+        </p>
+        <dl class="case__nums">
+          <div><dt>Full restore drill</dt><dd>31h <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow"/></svg> <b>2h 40m</b></dd></div>
+          <div><dt>Sites with verified backup</dt><dd>32/34 <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow"/></svg> <b>34/34</b></dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- 07 · metrics band ------------------------------------------------------ -->
+<section class="band" aria-label="Operating numbers">
+  <div class="shell band__grid">
+    <div class="band__item"><span class="band__num num" data-count="99.98" data-dec="2">99.98</span><span class="band__unit">%</span><p>Measured uptime, trailing twelve months, across all managed estates</p></div>
+    <div class="band__item"><span class="band__num num" data-count="11">11</span><span class="band__unit">min</span><p>Median first response on P1, 2025. Contracted target is 15</p></div>
+    <div class="band__item"><span class="band__num num" data-count="340">340</span><p>Endpoints under active management as of July 2026</p></div>
+    <div class="band__item"><span class="band__num num" data-count="47">47</span><p>Engineers. Twenty-nine in Austin, eighteen in Pune. No offshore relabelling</p></div>
+  </div>
+</section>
+
+
+<!-- 08 · the bench --------------------------------------------------------- -->
+<section class="section people" id="people">
+  <div class="shell">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="label"><span class="tick"></span>055 &mdash; The bench</p>
+        <h2 class="sec-h2 reveal">You'll meet these people, not a sales team.</h2>
+      </div>
+      <p class="sec-lede reveal">
+        Whoever scopes your work stays on it. We have never once handed an account to someone
+        the client hadn't already argued with.
+      </p>
+    </header>
+
+    <ul class="people__grid">
+      <li class="person reveal">
+        <span class="person__plate" aria-hidden="true"><b>PR</b><i>Plate 01</i></span>
+        <h3>Priya Raghunathan</h3>
+        <p class="person__role">Principal Cloud Architect &middot; Pune</p>
+        <p class="person__bio">Fourteen years, most of them in regulated environments. Owns the landing-zone standard every client account gets built from. AWS Solutions Architect Professional, CKA.</p>
+      </li>
+      <li class="person reveal">
+        <span class="person__plate" aria-hidden="true"><b>MB</b><i>Plate 02</i></span>
+        <h3>Marcus Bell</h3>
+        <p class="person__role">Head of Managed Operations &middot; Austin</p>
+        <p class="person__bio">Ran the night shift at a 900-seat MSP for six years and has strong, specific opinions about alert thresholds. Rewrote our on-call rota after the second time someone got paged twice in one night.</p>
+      </li>
+      <li class="person reveal">
+        <span class="person__plate" aria-hidden="true"><b>DO</b><i>Plate 03</i></span>
+        <h3>Dan Okonkwo</h3>
+        <p class="person__role">Security Lead &middot; Austin</p>
+        <p class="person__bio">CISSP, eight years in digital forensics before this. Writes the tabletop scenarios and enjoys it more than is strictly normal. Has told two prospective clients to fix their backups before hiring us.</p>
+      </li>
+      <li class="person reveal">
+        <span class="person__plate" aria-hidden="true"><b>EV</b><i>Plate 04</i></span>
+        <h3>Elena Vasquez</h3>
+        <p class="person__role">Principal Engineer, Applications &middot; Austin</p>
+        <p class="person__bio">.NET and Node, twelve years. Specialises in the systems nobody wants to touch — the ones with no tests, one deploy script, and an integration that only runs on Tuesdays.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- 09 · pricing ----------------------------------------------------------- -->
+<section class="section pricing" id="pricing">
+  <div class="shell">
+    <header class="sec-head">
+      <p class="label"><span class="tick"></span>066 &mdash; What it costs</p>
+      <h2 class="sec-h2 reveal">Numbers on the website, because you were going to ask anyway.</h2>
+      <p class="sec-lede reveal">
+        Real ranges. Final pricing lands after the Survey, when we know what's actually in the
+        estate — but nothing below is going to double on you.
+      </p>
+    </header>
+
+    <div class="plans">
+      <article class="plan reveal">
+        <p class="plan__kind">Project</p>
+        <p class="plan__price"><b>from $18,000</b><span>fixed scope, fixed fee</span></p>
+        <p class="plan__for">A migration, an assessment, a performance job. Defined start and end.</p>
+        <ul class="ticklist ticklist--sm">
+          <li>Scoped from the Survey, priced before we start</li>
+          <li>Overruns caused by us are ours</li>
+          <li>All artefacts are yours on day one</li>
+        </ul>
+      </article>
+
+      <article class="plan plan--pick reveal">
+        <p class="plan__flag">Most clients start here</p>
+        <p class="plan__kind">Managed</p>
+        <p class="plan__price"><b>$92&ndash;$140</b><span>per endpoint / month</span></p>
+        <p class="plan__for">Ongoing operations across all four benches. Minimum 25 endpoints.</p>
+        <ul class="ticklist ticklist--sm">
+          <li>24/7 monitoring and response, patching, backup verification</li>
+          <li>Unlimited helpdesk during business hours in both regions</li>
+          <li>Monthly service review with your engineer, quarterly roadmap</li>
+          <li>Security baseline, EDR, and the compliance evidence collection</li>
+        </ul>
+        <ul class="crosslist">
+          <li>Hardware and third-party licences — you buy those direct, at your price, not ours</li>
+          <li>Project work over 40 hours, quoted separately</li>
+        </ul>
+      </article>
+
+      <article class="plan reveal">
+        <p class="plan__kind">Embedded</p>
+        <p class="plan__price"><b>from $9,400</b><span>per month</span></p>
+        <p class="plan__for">A named engineer, two to five days a week, inside your team and your stand-ups.</p>
+        <ul class="ticklist ticklist--sm">
+          <li>Same person each week — that's the entire point</li>
+          <li>Backed by the wider bench for escalation</li>
+          <li>Thirty days' notice, either direction</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="plainly reveal">
+      <h3>The three things that surprise people, said up front</h3>
+      <ul>
+        <li><b>Onboarding is billed separately</b> — $6,500 to $22,000 depending on estate size. It covers the Survey, agent deployment, documentation and the first backup rehearsal. It is not a deposit and we don't discount it.</li>
+        <li><b>Annual increase is capped in the contract</b> at 4% or CPI, whichever is lower. In writing, in the MSA, clause 7.2.</li>
+        <li><b>After-hours is included at P1 and P2 only.</b> A P3 at midnight will be answered and then billed at $185/hr. We'd rather tell you now than on an invoice.</li>
+      </ul>
+    </div>
+
+    <div class="dont reveal">
+      <p class="label label--mark">And what we don't do</p>
+      <ul>
+        <li>Consumer or home IT. Not our trade.</li>
+        <li>Hardware resale at markup. You buy direct; we spec it and we don't take the margin.</li>
+        <li>Estates under 25 endpoints. You'd be paying for structure you don't need — ask us and we'll name three break-fix shops in Austin who do it well.</li>
+        <li>Anything we can't monitor. If agents can't go on the endpoints, we're the wrong firm and the contract would be a lie.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- 10 · objections -------------------------------------------------------- -->
+<section class="section faq" id="faq">
+  <div class="shell">
+    <header class="sec-head">
+      <p class="label"><span class="tick"></span>077 &mdash; The awkward questions</p>
+      <h2 class="sec-h2 reveal">Asked in almost every first call.</h2>
+    </header>
+
+    <div class="acc">
+      <div class="acc__item">
+        <h3><button class="acc__q" aria-expanded="false" id="q1" aria-controls="a1"><span>What happens if we leave?</span><svg class="ico acc__ico" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="acc__a" id="a1" role="region" aria-labelledby="q1" hidden>
+          <p>You take everything. Documentation, runbooks, Terraform, credentials, monitoring configuration — all of it lives in your repositories and your accounts from day one, not ours. Offboarding support is thirty days at no charge, and we'll sit on a call with whoever replaces us. We've done it. It's not fun, but a client who can't leave isn't a client, they're a hostage.</p>
+        </div>
+      </div>
+
+      <div class="acc__item">
+        <h3><button class="acc__q" aria-expanded="false" id="q2" aria-controls="a2"><span>You're in Austin and Pune. Who actually picks up at 3&nbsp;a.m.?</span><svg class="ico acc__ico" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="acc__a" id="a2" role="region" aria-labelledby="q2" hidden>
+          <p>An engineer in Pune, where it is the middle of the working afternoon. That's the whole reason for the second office — nobody does their best incident response at 3 a.m. in their own time zone. Both offices are Commerce Wright employees on Commerce Wright payroll. We don't subcontract the night shift, and you can ask for the on-call rota.</p>
+        </div>
+      </div>
+
+      <div class="acc__item">
+        <h3><button class="acc__q" aria-expanded="false" id="q3" aria-controls="a3"><span>We already have an internal IT person. Does this replace them?</span><svg class="ico acc__ico" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="acc__a" id="a3" role="region" aria-labelledby="q3" hidden>
+          <p>Usually the opposite. In about two-thirds of our accounts there's an internal person who is very good and very outnumbered, spending their week on password resets instead of the work only they can do. We take the rota, the patching and the tickets. They get their job back. We'll say plainly if we think a role is redundant, but that has been rare.</p>
+        </div>
+      </div>
+
+      <div class="acc__item">
+        <h3><button class="acc__q" aria-expanded="false" id="q4" aria-controls="a4"><span>Who owns code you write for us?</span><svg class="ico acc__ico" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="acc__a" id="a4" role="region" aria-labelledby="q4" hidden>
+          <p>You do, outright, on payment. Written into the MSA. The exception is our internal tooling — the landing-zone modules and monitoring templates we bring to every engagement — which stays ours and comes to you under a perpetual, transferable licence. So if you leave, it keeps working. We just don't hand a competitor our toolbox.</p>
+        </div>
+      </div>
+
+      <div class="acc__item">
+        <h3><button class="acc__q" aria-expanded="false" id="q5" aria-controls="a5"><span>How fast do you really respond? Not the SLA. The real number.</span><svg class="ico acc__ico" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="acc__a" id="a5" role="region" aria-labelledby="q5" hidden>
+          <p>Median P1 first response across 2025 was 11 minutes against a contracted 15. The 95th percentile was 34 minutes, which is the number worth asking about, and it happened four times — twice during a regional provider outage when everyone paged at once. We hand you both numbers monthly. Any provider who quotes you only a median is showing you their good side.</p>
+        </div>
+      </div>
+
+      <div class="acc__item">
+        <h3><button class="acc__q" aria-expanded="false" id="q6" aria-controls="a6"><span>We're mid-contract with another provider.</span><svg class="ico acc__ico" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="acc__a" id="a6" role="region" aria-labelledby="q6" hidden>
+          <p>Then wait, unless something is actually on fire. Read your notice clause first — most MSP agreements auto-renew with 90 days' notice, and people miss it. We're happy to run the Survey in parallel so you have documentation and a plan the day your notice lands. We won't help you break a contract, and we'd rather start a relationship without that being the first thing we did together.</p>
+        </div>
+      </div>
+
+      <div class="acc__item">
+        <h3><button class="acc__q" aria-expanded="false" id="q7" aria-controls="a7"><span>Do you use AI in the work?</span><svg class="ico acc__ico" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="acc__a" id="a7" role="region" aria-labelledby="q7" hidden>
+          <p>For triage summaries, log correlation and first-draft code that a named engineer then reviews and signs for. It does not touch production unattended, it does not close tickets, and no client data goes to a model that trains on it. If that changes, the change goes in the monthly report before it goes into the stack.</p>
+        </div>
+      </div>
+
+      <div class="acc__item">
+        <h3><button class="acc__q" aria-expanded="false" id="q8" aria-controls="a8"><span>What's the longest you've kept a client?</span><svg class="ico acc__ico" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="acc__a" id="a8" role="region" aria-labelledby="q8" hidden>
+          <p>Eleven years — a manufacturer we started with in 2015, three CTOs ago. Median tenure across the book is 4 years 7 months. We've lost six clients since 2014: three were acquired and absorbed into a parent's IT, two outgrew us and hired properly in-house, which is a good ending, and one we handled badly in 2019. Ask us about that one on the call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 11 · contact ----------------------------------------------------------- -->
+<section class="section contact" id="contact">
+  <div class="gridfield gridfield--sub" aria-hidden="true"><span class="gridfield__layer"></span></div>
+  <div class="shell contact__grid">
+    <div class="contact__copy">
+      <p class="label"><span class="tick"></span>088 &mdash; Start here</p>
+      <h2 class="sec-h2 reveal">A systems review takes forty minutes.</h2>
+      <p class="sec-lede reveal">
+        No deck. An engineer, your estate, and a list of what we'd look at first. If the answer is
+        that you don't need us yet, that's what you'll hear — it's happened often enough that we
+        stopped being surprised by it.
+      </p>
+
+      <ul class="contact__direct reveal">
+        <li><span class="label">Direct</span> <a href="mailto:ops@commercewright.example">ops@commercewright.example</a></li>
+        <li><span class="label">Existing clients, P1</span> <a href="tel:+15125550148">+1 (512) 555-0148</a></li>
+        <li><span class="label">Austin</span> 1401 Lavaca St, Suite 210, Austin, TX 78701</li>
+        <li><span class="label">Pune</span> Amar Tech Park, Balewadi, Pune 411045</li>
+      </ul>
+    </div>
+
+    <form class="form reveal" id="reviewForm" novalidate>
+      <p class="form__title label">Request a systems review</p>
+
+      <div class="field">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <p class="field__err" data-for="f-name"></p>
+      </div>
+
+      <div class="field">
+        <label for="f-email">Work email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+        <p class="field__err" data-for="f-email"></p>
+      </div>
+
+      <div class="field">
+        <label for="f-company">Company</label>
+        <input id="f-company" name="company" type="text" autocomplete="organization" required>
+        <p class="field__err" data-for="f-company"></p>
+      </div>
+
+      <div class="field">
+        <label for="f-size">Roughly how many endpoints</label>
+        <select id="f-size" name="size" required>
+          <option value="">Pick a range</option>
+          <option>Under 25 — we'll point you elsewhere, honestly</option>
+          <option>25–75</option>
+          <option>76–200</option>
+          <option>201–500</option>
+          <option>500+</option>
+          <option>No idea, that's part of the problem</option>
+        </select>
+        <p class="field__err" data-for="f-size"></p>
+      </div>
+
+      <div class="field">
+        <label for="f-msg">What's on fire? <span class="field__opt">Optional, but it helps</span></label>
+        <textarea id="f-msg" name="message" rows="4" placeholder="e.g. colo lease ends in March and nobody has a plan"></textarea>
+      </div>
+
+      <button class="btn btn--primary btn--block magnetic" type="submit">
+        Send it
+        <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </button>
+
+      <p class="form__note">Goes to a shared inbox both offices read. Replies inside one business day, usually the same afternoon.</p>
+      <p class="form__done" id="formDone" role="status" hidden>Sent. You'll hear from Marcus or Priya, not a sequence.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+
+<!-- 12 · footer ------------------------------------------------------------ -->
+<footer class="foot">
+  <div class="shell foot__inner">
+    <div class="foot__brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="2"/><path d="M8 22V10h4l4 8 4-8h4v12"/></svg>
+      <p>Commerce Wright Cloud Solutions<br><span>Cloud, applications, operations and security since 2014.</span></p>
+    </div>
+
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="#breaks">Where it breaks</a>
+      <a href="#benches">What we run</a>
+      <a href="#process">How we work</a>
+      <a href="#proof">Proof</a>
+      <a href="#pricing">What it costs</a>
+      <a href="#faq">Questions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <p class="foot__stamp">
+      <span>DWG. CW&#8209;2026&#8209;01</span>
+      <span>REV. C</span>
+      <span>SHEET 1 OF 1</span>
+    </p>
+  </div>
+  <div class="shell foot__legal">
+    <p>&copy; 2026 Commerce Wright Cloud Solutions, LLC. Austin, Texas &amp; Pune, Maharashtra.</p>
+    <p>SOC 2 Type II &middot; ISO/IEC 27001:2022 &middot; <a href="#contact">Privacy</a> &middot; <a href="#contact">Terms</a></p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

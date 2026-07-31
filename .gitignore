@@ -1,0 +1,91 @@
+# --- Internal docs (not deployed) ---
+CLAIMS.md
+README.md
+
+# --- OS junk ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- Editors / IDEs ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.\#*
+\#*\#
+*.sublime-workspace
+*.sublime-project
+
+# --- Local env / secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# --- Dependencies (if a toolchain is ever added) ---
+node_modules/
+.pnp
+.pnp.js
+vendor/
+.bundle/
+
+# --- Build / deploy output ---
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.next/
+.vercel
+.netlify
+.wrangler/
+.firebase/
+*.tsbuildinfo
+
+# --- Logs / debug ---
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Test / coverage ---
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# --- Local server / tooling scratch ---
+.python-version
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Agent / tool scratch ---
+.claude/settings.local.json
+.serena/
+*.local.md
+scratch/
+tmp/
+temp/
+
+# --- Archives & scratch media ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bak
+*.orig
+*.rej
