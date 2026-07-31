@@ -237,8 +237,8 @@ a { color: inherit; }
 }
 
 .brand { display: flex; align-items: center; gap: var(--s-3); text-decoration: none; margin-right: auto; }
-.brand__mark { width: 30px; height: 30px; flex: none; fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linejoin: round; }
-.brand__mark rect { stroke: var(--line); }
+/* the mark carries its own gradient, so it needs sizing only — no ink strokes */
+.brand__mark { width: 32px; height: 32px; flex: none; display: block; }
 .brand__text { display: grid; line-height: 1.15; }
 .brand__text b { font-family: var(--font-display); font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.015em; }
 .brand__text i {
@@ -312,7 +312,15 @@ a { color: inherit; }
 
 .hero__lede { font-size: var(--t-lead); color: var(--ink-2); max-width: 56ch; margin-top: var(--s-5); }
 
-.hero__cta { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-6); }
+/* single column sized to the longer label, so both CTAs share one width */
+.hero__cta {
+  display: grid;
+  grid-template-columns: minmax(0, max-content);
+  grid-auto-rows: 1fr;              /* equal rows: the taller label sets both heights */
+  gap: var(--s-3);
+  margin-top: var(--s-6);
+}
+.hero__cta .btn { justify-content: center; }
 
 .hero__stats {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -611,17 +619,25 @@ a { color: inherit; }
 
 .process.is-pinned .process__pin {
   height: 100vh;              /* deterministic — ScrollTrigger pins against this */
-  padding-block: 0;
+  /* the sticky nav floats over the top of the pinned frame, so the sheet header
+     centred against a full 100vh sat underneath it — reserve the bar's height */
+  padding-block: var(--nav-h) 0;
   display: flex; flex-direction: column; justify-content: center;
   overflow: hidden;
 }
 .process.is-pinned .process__sheet { margin-bottom: var(--s-5); }
 .process.is-pinned .process__track {
   flex-direction: row; will-change: transform;
-  height: min(600px, calc(100vh - 220px));
+  /* The frame is a hard 100vh minus the nav bar it sits under, so whatever the
+     rail doesn't use shows up as dead band above and below. The sheet header
+     costs ~70px; the rest of the subtraction is the breathing room we actually
+     want, split evenly by the frame's `justify-content: center`. */
+  height: min(700px, calc(100vh - var(--nav-h) - 110px));
 }
 .process.is-pinned .process__intro { width: min(420px, 78vw); flex: none; align-self: center; max-width: none; }
-.process.is-pinned .step { width: min(400px, 80vw); flex: none; max-width: none; }
+/* 480 rather than 400: at 400 the longest step ran ~70px past the card and the
+   overflow bled onto the sheet behind it */
+.process.is-pinned .step { width: min(480px, 80vw); flex: none; max-width: none; }
 
 .step {
   background: var(--paper);
@@ -918,7 +934,14 @@ a { color: inherit; }
 /* ==========================================================================
    12 · footer
    ========================================================================== */
-.foot { background: var(--paper); padding-block: var(--s-8) var(--s-6); border-top: var(--hair) solid var(--line-hair); }
+.foot {
+  background: var(--paper);
+  border-top: var(--hair) solid var(--line-hair);
+  padding-top: var(--s-8);
+  /* the legal line is the last thing on the page: it needs real air under it,
+     plus the home-indicator inset so iOS doesn't sit on top of it */
+  padding-bottom: calc(var(--s-7) + env(safe-area-inset-bottom, 0px));
+}
 .foot__inner {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) auto;
   gap: var(--s-6) var(--s-7); align-items: start;
@@ -1028,7 +1051,7 @@ a { color: inherit; }
 }
 
 @media (max-width: 460px) {
-  .hero__cta { display: grid; }
+  .hero__cta { grid-template-columns: 1fr; }
   .btn { justify-content: center; }
   .strip__note { display: none; }
   /* below 460 the wordmark can't share the bar with a CTA — keep the mark */
