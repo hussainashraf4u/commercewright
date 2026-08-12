@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Commerce Wright — Custom software, mobile apps, and digital transformation built to survive production</title>
+  <title>Commerce Wright — Custom Software &amp; Digital Transformation</title>
   <meta name="description"
     content="Commerce Wright is a custom software and digital transformation firm. We build scalable applications, mobile apps, cloud infrastructure, and advanced technology integrations (AI/ML, IoT). Bengaluru.">
   <meta name="theme-color" content="#0f766e">
@@ -68,6 +68,8 @@
   "image": "https://www.commercewright.com/assets/og/og-cover.png",
   "description": "Custom software and digital transformation firm. Scalable applications, mobile apps, cloud infrastructure, and advanced tech integrations built to survive production.",
   "foundingDate": "2025",
+  "email": "admin@commercewright.com",
+  "areaServed": "Worldwide",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Bengaluru",
@@ -129,7 +131,7 @@
   <!-- 00 · nav -------------------------------------------------------------- -->
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a class="brand" href="#top" aria-label="Commerce Wright, AI systems and software engineering, back to top">
+      <a class="brand" href="#top" aria-label="Commerce Wright, custom software and digital transformation, back to top">
         <img class="brand__mark" src="assets/logo/mark.svg" alt="" width="32" height="32" decoding="async">
         <span class="brand__text">
           <b>Commerce Wright</b>
@@ -154,6 +156,16 @@
             <use href="#i-moon" />
           </svg>
         </button>
+        <script>
+          /* The theme is resolved in <head>, but main.js is deferred — without this the
+             button announces "not pressed" to a screen reader on a dark-theme load. */
+          (function () {
+            var b = document.getElementById('themeToggle');
+            var dark = document.documentElement.dataset.theme === 'dark';
+            b.setAttribute('aria-pressed', String(dark));
+            b.setAttribute('aria-label', dark ? 'Switch to drafting-paper (light) theme' : 'Switch to cyanotype (dark) theme');
+          })();
+        </script>
         <a class="btn btn--primary btn--sm magnetic" href="#contact">
           <span class="btn__long">Book an engineering review</span>
           <span class="btn__short">Book a review</span>
@@ -229,7 +241,7 @@
               <rect x="170" y="120" width="180" height="46" rx="2" />
             </g>
             <text class="sch-lab" x="260" y="141">APPLICATION BACKEND</text>
-            <text class="sch-sub" x="260" y="155">p95 1.9s · containerized</text>
+            <text class="sch-sub" x="260" y="155">observable · containerized</text>
 
             <g class="sch-node draw">
               <rect x="52" y="212" width="164" height="50" rx="2" />
@@ -259,7 +271,7 @@
               <rect x="52" y="400" width="176" height="46" rx="2" />
             </g>
             <text class="sch-lab" x="140" y="421">INTEGRATION TESTS</text>
-            <text class="sch-sub" x="140" y="435">312 cases · runs in CI</text>
+            <text class="sch-sub" x="140" y="435">runs on every commit</text>
 
             <g class="sch-node draw">
               <rect x="284" y="400" width="184" height="46" rx="2" />
@@ -296,7 +308,7 @@
 
 
 
-    <!-- definition ------------------------------------------------------------ -->
+    <!-- 02 · definition ------------------------------------------------------- -->
     <aside class="define" aria-label="On the name">
       <div class="shell define__inner reveal">
         <p class="define__word">wright <em>/rīt/</em> <span>noun</span></p>
@@ -315,11 +327,11 @@
     <section class="section breaks" id="breaks">
       <div class="shell">
         <header class="sec-head">
-          <p class="label"><span class="tick"></span>011 &mdash; Where it breaks</p>
+          <p class="label"><span class="tick"></span>01 &mdash; Where it breaks</p>
           <h2 class="sec-h2 reveal">None of these looked like risks at the time.</h2>
           <p class="sec-lede reveal">
             Three situations we get called into more than any others. Each one started as a
-            sensible decision made by competent people. If you recognise your own build in one of
+            sensible decision made by competent people. If you recognize your own build in one of
             them, that's the conversation to have.
           </p>
         </header>
@@ -381,7 +393,7 @@
       <div class="shell">
         <header class="sec-head sec-head--split">
           <div>
-            <p class="label"><span class="tick"></span>022 &mdash; What we build</p>
+            <p class="label"><span class="tick"></span>02 &mdash; What we build</p>
             <h2 class="sec-h2 reveal">Four benches, one team.</h2>
           </div>
           <p class="sec-lede reveal">
@@ -393,23 +405,23 @@
 
         <div class="benches__grid">
           <div class="benchtabs" role="tablist" aria-label="Service areas">
-            <button class="benchtab is-active" role="tab" id="tab-cloud" aria-selected="true"
-              aria-controls="panel-cloud">
+            <button class="benchtab is-active" role="tab" id="tab-build" aria-selected="true"
+              aria-controls="panel-build">
               <svg class="ico" aria-hidden="true">
-                <use href="#i-pulse" />
+                <use href="#i-code" />
               </svg>
               <span class="benchtab__no">01</span>
               <span class="benchtab__name">Custom Software &amp; App Development</span>
             </button>
-            <button class="benchtab" role="tab" id="tab-apps" aria-selected="false" aria-controls="panel-apps"
+            <button class="benchtab" role="tab" id="tab-integrate" aria-selected="false" aria-controls="panel-integrate"
               tabindex="-1">
               <svg class="ico" aria-hidden="true">
-                <use href="#i-code" />
+                <use href="#i-pulse" />
               </svg>
               <span class="benchtab__no">02</span>
               <span class="benchtab__name">Advanced Tech Integration</span>
             </button>
-            <button class="benchtab" role="tab" id="tab-ops" aria-selected="false" aria-controls="panel-ops"
+            <button class="benchtab" role="tab" id="tab-transform" aria-selected="false" aria-controls="panel-transform"
               tabindex="-1">
               <svg class="ico" aria-hidden="true">
                 <use href="#i-cloud" />
@@ -417,7 +429,7 @@
               <span class="benchtab__no">03</span>
               <span class="benchtab__name">Digital Transformation</span>
             </button>
-            <button class="benchtab" role="tab" id="tab-sec" aria-selected="false" aria-controls="panel-sec"
+            <button class="benchtab" role="tab" id="tab-data" aria-selected="false" aria-controls="panel-data"
               tabindex="-1">
               <svg class="ico" aria-hidden="true">
                 <use href="#i-shield" />
@@ -429,7 +441,7 @@
 
           <div class="benchstage">
             <!-- panel 1 : itemised list -->
-            <div class="benchpanel is-active" id="panel-cloud" role="tabpanel" aria-labelledby="tab-cloud">
+            <div class="benchpanel is-active" id="panel-build" role="tabpanel" aria-labelledby="tab-build">
               <figure class="bench-fig">
                 <figcaption class="label drawing-title"><span>Fig. 02</span> Prototype to release &mdash; the path
                 </figcaption>
@@ -469,7 +481,7 @@
                   <g class="sch-dim draw">
                     <path d="M14 226h432M14 220v12M446 220v12" />
                   </g>
-                  <text class="sch-dimtext" x="230" y="243">PROTOTYPE TO RELEASE — 8 TO 16 WEEKS</text>
+                  <text class="sch-dimtext" x="230" y="243">PROTOTYPE TO RELEASE — SCOPED IN DESIGN</text>
                 </svg>
               </figure>
 
@@ -490,7 +502,7 @@
             </div>
 
             <!-- panel 2 : stat + prose -->
-            <div class="benchpanel" id="panel-apps" role="tabpanel" aria-labelledby="tab-apps" hidden>
+            <div class="benchpanel" id="panel-integrate" role="tabpanel" aria-labelledby="tab-integrate" hidden>
               <figure class="bench-fig">
                 <figcaption class="label drawing-title"><span>Fig. 03</span> Integration surface &mdash; legacy wrapped
                 </figcaption>
@@ -548,19 +560,14 @@
                   systems directly into your ERP and legacy databases, using strict schemas and automated
                   validations. It is ordinary software engineering all the way down.
                 </p>
-                <p class="bench-stat">
-                  <b class="num" data-count="11.4" data-dec="1">11.4</b><span class="unit">s</span>
-                  <svg class="ico ico--sm" aria-hidden="true">
-                    <use href="#i-arrow" />
-                  </svg>
-                  <b class="num accent" data-count="1.9" data-dec="1">1.9</b><span class="unit">s</span>
-                  <em>Halstead IoT hub p95 telemetry latency, after rewriting database ingestion</em>
-                </p>
+                <p class="bench-foot">On one IoT telemetry platform, the win wasn't the model or the sensors —
+                  it was rewriting the ingestion path so readings arrived clean, in order, and in time to be
+                  worth acting on. That is where most of these projects are actually won or lost.</p>
               </div>
             </div>
 
             <!-- panel 3 : SLA table -->
-            <div class="benchpanel" id="panel-ops" role="tabpanel" aria-labelledby="tab-ops" hidden>
+            <div class="benchpanel" id="panel-transform" role="tabpanel" aria-labelledby="tab-transform" hidden>
               <figure class="bench-fig">
                 <figcaption class="label drawing-title"><span>Fig. 04</span> Delivery pipeline &mdash; configuration
                   included</figcaption>
@@ -591,18 +598,20 @@
                   <g class="sch-dim draw">
                     <path d="M160 176v46M300 176v46M160 222h140" />
                   </g>
-                  <text class="sch-dimtext" x="230" y="240">MEDIAN LEAD TIME — 2.4 DAYS</text>
+                  <text class="sch-dimtext" x="230" y="240">MERGE TO PRODUCTION — DAYS, NOT SPRINTS</text>
                 </svg>
               </figure>
 
               <div class="bench-copy">
-                <h3>Everything ships through one pipeline, including infrastructure configuration.</h3>
+                <h3>Transformation is a delivery pipeline, not a strategy deck.</h3>
                 <p>
-                  Infrastructure is code. Setting up cloud databases, compute clusters, or networks gets a
-                  pull request, a reviewer, a version, and a rollback, exactly like the application code
-                  around it. Underneath: Terraform or OpenTofu for the infrastructure, ephemeral
-                  environments per branch, and resource budgets the system defends by itself rather than
-                  by paging somebody.
+                  Moving a business off spreadsheets, shared drives and manual handoffs only sticks if the
+                  replacement can be changed safely afterward. So legacy migration, workflow automation and
+                  cloud modernization all ship the same way: infrastructure is code. Setting up cloud
+                  databases, compute clusters, or networks gets a pull request, a reviewer, a version, and a
+                  rollback, exactly like the application code around it. Underneath: Terraform or OpenTofu for
+                  the infrastructure, ephemeral environments per branch, and resource budgets the system
+                  defends by itself rather than by paging somebody.
                 </p>
                 <table class="sla">
                   <caption class="visually-hidden">Production budgets and the automatic response when each is breached
@@ -622,7 +631,7 @@
                     </tr>
                     <tr>
                       <td><b>Infrastructure cost</b> monthly</td>
-                      <td>$500/env</td>
+                      <td>Agreed per env</td>
                       <td>Tear down ephemeral testing builds automatically</td>
                     </tr>
                     <tr>
@@ -637,14 +646,14 @@
                     </tr>
                   </tbody>
                 </table>
-                <p class="bench-foot">Budgets are set during the Design and reviewed every month with you. The point of
+                <p class="bench-foot">Budgets are set during Design and reviewed every month with you. The point of
                   writing them down is that the system degrades on purpose, in a way you chose, instead of failing in
                   front of a customer.</p>
               </div>
             </div>
 
             <!-- panel 4 : quote + list -->
-            <div class="benchpanel" id="panel-sec" role="tabpanel" aria-labelledby="tab-sec" hidden>
+            <div class="benchpanel" id="panel-data" role="tabpanel" aria-labelledby="tab-data" hidden>
               <figure class="bench-fig">
                 <figcaption class="label drawing-title"><span>Fig. 05</span> Control plane &mdash; data security flows
                 </figcaption>
@@ -689,7 +698,7 @@
                   <p>“The data warehouse migration was the project we expected to drag on. Commerce Wright delivered
                     clean schemas, automated reports, and a daily reconciliation run that proved our inventory matched
                     the books.”</p>
-                  <footer>VP Operations, Portway Logistics</footer>
+                  <footer>VP Operations &middot; logistics client, name withheld</footer>
                 </blockquote>
                 <ul class="ticklist">
                   <li>ETL/ELT data pipelines built on modern cloud warehouses (Snowflake, BigQuery, Databricks)</li>
@@ -724,8 +733,8 @@
       <div class="process__pin" id="processPin">
 
         <p class="process__sheet label">
-          <span><span class="tick"></span>033 &mdash; How we work</span>
-          <em aria-hidden="true">Sheet 3 of 4 &nbsp;·&nbsp; scroll to advance <svg class="ico ico--xs"
+          <span><span class="tick"></span>03 &mdash; How we work</span>
+          <em aria-hidden="true">Four stages &nbsp;·&nbsp; scroll to advance <svg class="ico ico--xs"
               aria-hidden="true">
               <use href="#i-arrow" />
             </svg></em>
@@ -754,7 +763,7 @@
             </p>
             <p class="step__out"><span>You get</span> A strategic roadmap, a ranked list of what to build with an
               honest scope, and a shorter list of what not to build.</p>
-            <p class="step__aside">Nine times we've finished a Discovery and said the answer isn't a new build — it's a
+            <p class="step__aside">More than once we've finished a Discovery and said the answer isn't a new build — it's a
               rules engine, a schema change, or hiring one person. You keep the document either way.</p>
           </article>
 
@@ -805,7 +814,7 @@
     <section class="section proof" id="proof">
       <div class="shell">
         <header class="sec-head">
-          <p class="label"><span class="tick"></span>044 &mdash; Proof</p>
+          <p class="label"><span class="tick"></span>04 &mdash; Proof</p>
           <h2 class="sec-h2 reveal">The constraint that made each job hard.</h2>
         </header>
 
@@ -830,8 +839,8 @@
             <p class="case__constraint"><span>Constraint</span> A product catalog and order system too large, and too
               load-sensitive, to hand to an off-the-shelf bot.</p>
             <p>
-              We integrated a DesignFlow conversational flow directly with the client's catalog, inventory and
-              order-status APIs, so the bot answers from live data instead of a script. Handoff to a human agent
+              We integrated DesignFlow, a conversational AI platform, directly with the client's catalog, inventory
+              and order-status APIs, so it answers from live data instead of a script. Handoff to a human agent
               carries full conversation context, so the customer never repeats themselves.
             </p>
           </article>
@@ -880,12 +889,12 @@
 
 
 
-    <!-- 08 · the bench --------------------------------------------------------- -->
+    <!-- 07 · who's on it ------------------------------------------------------- -->
     <section class="section people" id="people">
       <div class="shell">
         <header class="sec-head sec-head--split">
           <div>
-            <p class="label"><span class="tick"></span>055 &mdash; Who's on it</p>
+            <p class="label"><span class="tick"></span>05 &mdash; Who's on it</p>
             <h2 class="sec-h2 reveal">Decades of experience, not headshots.</h2>
           </div>
           <p class="sec-lede reveal">
@@ -898,7 +907,7 @@
           <li class="person reveal">
             <h3>Principal Architect</h3>
             <p class="person__role">Custom Software &middot; 16+ years</p>
-            <p class="person__bio">Over a decade of experience, most of it in regulated environments. Owns the core
+            <p class="person__bio">Over sixteen years of experience, most of it in regulated environments. Owns the core
               testing and database architecture for every engagement, and the opinion that clean database design —
               not framework choice — decides whether a system is any good.</p>
           </li>
@@ -906,13 +915,13 @@
             <h3>DevSecOps Lead</h3>
             <p class="person__role">Security &amp; Infrastructure &middot; 14+ years</p>
             <p class="person__bio">Over fourteen years hardening pipelines and infrastructure, with a background in
-              digital forensics before this. Owns vulnerability testing, SQL injection and auth-bypass checks, and CI/CD
+              digital forensics. Owns vulnerability testing, SQL injection and auth-bypass checks, and CI/CD
               security gates across every engagement.</p>
           </li>
           <li class="person reveal">
             <h3>Engineering Team</h3>
             <p class="person__role">App &amp; Platform Development &middot; 6&ndash;8 years</p>
-            <p class="person__bio">Six to eight years each, built working with global clients across time zones and
+            <p class="person__bio">Six to eight years each, earned working with global clients across time zones and
               compliance regimes. Covers the legacy applications nobody wants to touch — no tests, one deploy script,
               an integration that only runs on Tuesdays — and is usually the reason a migration actually finishes.</p>
           </li>
@@ -921,12 +930,12 @@
     </section>
 
 
-    <!-- 10 · contact ----------------------------------------------------------- -->
+    <!-- 08 · contact ----------------------------------------------------------- -->
     <section class="section contact" id="contact">
       <div class="gridfield gridfield--sub" aria-hidden="true"><span class="gridfield__layer"></span></div>
       <div class="shell contact__grid">
         <div class="contact__copy">
-          <p class="label"><span class="tick"></span>077 &mdash; Start here</p>
+          <p class="label"><span class="tick"></span>06 &mdash; Start here</p>
           <h2 class="sec-h2 reveal">An engineering review takes forty minutes.</h2>
           <p class="sec-lede reveal">
             No deck. An engineer, your system, and a list of what we'd look at first. If the answer is
@@ -937,7 +946,7 @@
           <ul class="contact__direct reveal">
             <li><span class="label">Direct</span> <a href="mailto:admin@commercewright.com">admin@commercewright.com</a>
             </li>
-            <li><span class="label">Bengaluru</span> Bengaluru, Karnataka</li>
+            <li><span class="label">Office</span> Bengaluru, Karnataka</li>
           </ul>
         </div>
 
@@ -947,25 +956,27 @@
 
           <div class="field">
             <label for="f-name">Name</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required>
-            <p class="field__err" data-for="f-name"></p>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+            <p class="field__err" id="f-name-err" data-for="f-name" role="alert"></p>
           </div>
 
           <div class="field">
             <label for="f-email">Work email</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required>
-            <p class="field__err" data-for="f-email"></p>
+            <input id="f-email" name="email" type="email" autocomplete="email" required
+              aria-describedby="f-email-err">
+            <p class="field__err" id="f-email-err" data-for="f-email" role="alert"></p>
           </div>
 
           <div class="field">
             <label for="f-company">Company</label>
-            <input id="f-company" name="company" type="text" autocomplete="organization" required>
-            <p class="field__err" data-for="f-company"></p>
+            <input id="f-company" name="company" type="text" autocomplete="organization" required
+              aria-describedby="f-company-err">
+            <p class="field__err" id="f-company-err" data-for="f-company" role="alert"></p>
           </div>
 
           <div class="field">
-            <label for="f-size">Where are you right now</label>
-            <select id="f-size" name="size" required>
+            <label for="f-size">Where are you right now?</label>
+            <select id="f-size" name="size" required aria-describedby="f-size-err">
               <option value="">Pick the closest one</option>
               <option>An idea and a deadline, no code yet</option>
               <option>A prototype that works, on one laptop</option>
@@ -974,7 +985,7 @@
               <option>A system we're afraid to change</option>
               <option>No idea, that's part of the problem</option>
             </select>
-            <p class="field__err" data-for="f-size"></p>
+            <p class="field__err" id="f-size-err" data-for="f-size" role="alert"></p>
           </div>
 
           <div class="field">
@@ -1003,13 +1014,13 @@
   </main>
 
 
-  <!-- 11 · footer ------------------------------------------------------------ -->
+  <!-- 09 · footer ------------------------------------------------------------ -->
   <footer class="foot">
     <div class="shell foot__inner">
       <div class="foot__brand">
         <img class="brand__mark" src="assets/logo/mark.svg" alt="" width="32" height="32" loading="lazy"
           decoding="async">
-        <p>Commerce Wright<br><span>AI systems and software engineering since 2014.</span></p>
+        <p>Commerce Wright<br><span>Custom software and digital transformation since 2025.</span></p>
       </div>
 
       <nav class="foot__nav" aria-label="Footer">
@@ -1017,7 +1028,7 @@
         <a href="#benches">What we build</a>
         <a href="#process">How we work</a>
         <a href="#proof">Proof</a>
-        <a href="#people">The bench</a>
+        <a href="#people">Who's on it</a>
         <a href="#contact">Contact</a>
       </nav>
 

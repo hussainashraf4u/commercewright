@@ -151,12 +151,14 @@
       var field = input.closest('.field');
       var fieldErr = field && field.querySelector('.field__err');
       field && field.classList.add('is-bad');
+      input.setAttribute('aria-invalid', 'true');
       if (fieldErr) fieldErr.textContent = msg;
     }
     function clear(input) {
       var field = input.closest('.field');
       var fieldErr = field && field.querySelector('.field__err');
       field && field.classList.remove('is-bad');
+      input.removeAttribute('aria-invalid');
       if (fieldErr) fieldErr.textContent = '';
     }
     function reveal(el) {
@@ -213,6 +215,39 @@
     });
   })();
 
+  /* --------------------------------------------------------------------
+     In-page anchors — smooth per click, not via CSS
+     `html { scroll-behavior: smooth }` would also smooth ScrollTrigger's own
+     measurement scrolls, which silently breaks the pinned process rail (see
+     the note in styles.css). Asking for smooth one click at a time leaves
+     every programmatic scroll instant, which is what ScrollTrigger needs.
+     -------------------------------------------------------------------- */
+  (function anchors() {
+    document.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a) return;
+
+      var hash = a.getAttribute('href');
+      if (!hash || hash === '#') return;
+
+      var target;
+      try { target = document.querySelector(hash); } catch (err) { return; }
+      if (!target) return;
+
+      e.preventDefault();
+      target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+
+      // Keep the keyboard where the eye went — without this, tab order carries
+      // on from the link rather than from the section it jumped to.
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+
+      if (history.pushState) history.pushState(null, '', hash);
+    });
+  })();
+
   /* ====================================================================
      Everything past this point is motion. Bail out cleanly if we can't
      or shouldn't animate.
@@ -224,7 +259,9 @@
   /* Browser scroll restoration and ScrollTrigger pinning don't mix: on reload
      the browser restores the old offset, ScrollTrigger measures against it, and
      the pin bakes in a start position thousands of pixels wrong. Start every
-     load at the top and measure from there. Any #hash still resolves after. */
+     load at the top and measure from there. A #hash is left alone — it lands on
+     the right offset by itself now that `scroll-behavior: smooth` is gone from
+     html and ScrollTrigger can measure at any scroll position. */
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   if (window.scrollY > 0 && !window.location.hash) window.scrollTo(0, 0);
 
@@ -381,6 +418,10 @@
     // Switch to the horizontal rail only now that the rail actually exists.
     section.classList.add('is-pinned');
 
+    // Crossing down to the stacked layout and back leaves the steps holding the
+    // fallback's opacity:0 — the rail would come back empty. Clear it on entry.
+    gsap.set(section.querySelectorAll('.step, .process__intro'), { clearProps: 'opacity,transform' });
+
     var distance = function () { return Math.max(0, track.scrollWidth - window.innerWidth + 40); };
 
     gsap.to(track, {
@@ -411,6 +452,9 @@
       opacity: 1, y: 0, duration: 0.5, stagger: 0.08,
       scrollTrigger: { trigger: '.process', start: 'top 78%' }
     });
+    // Hand the steps back unstyled if the viewport widens before the entrance
+    // tween has run, otherwise they carry opacity:0 into the horizontal rail.
+    return function () { gsap.set(steps, { clearProps: 'opacity,transform' }); };
   });
 
   /* --- background grid parallax (decorative layers only) ---------------- */

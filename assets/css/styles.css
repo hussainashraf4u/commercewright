@@ -14,8 +14,12 @@
   margin: 0;
 }
 
+/* No `scroll-behavior: smooth` here, deliberately. It applies to *every*
+   scroll, including the instant scrollTop writes ScrollTrigger makes while it
+   measures — those turn async, it reads stale offsets, and the pinned process
+   rail bakes in start:0. Smooth anchor scrolling is opt-in per click in
+   main.js instead, which leaves ScrollTrigger's own scrolls instant. */
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -1242,7 +1246,11 @@ a {
 }
 
 .process.is-pinned .process__sheet em {
-  display: inline;
+  /* inline-flex, not inline: as plain inline the trailing arrow wrapped onto
+     its own line under "scroll to advance" at narrower desktop widths. */
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 /* Default is a plain vertical stack — reachable with no JS, no GSAP, or
