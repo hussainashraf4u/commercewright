@@ -100,6 +100,7 @@
         t.classList.toggle('is-active', on);
         if (!panel) return;
         panel.hidden = !on;
+        panel.tabIndex = on ? 0 : -1;
         panel.classList.toggle('is-active', on);
       });
       if (focus) tab.focus();
@@ -115,6 +116,11 @@
         ScrollTrigger.refresh();
       }
     }
+
+    tabs.forEach(function (t) {
+      var panel = document.getElementById(t.getAttribute('aria-controls'));
+      if (panel) panel.tabIndex = t.classList.contains('is-active') ? 0 : -1;
+    });
 
     tabs.forEach(function (tab, i) {
       tab.addEventListener('click', function () { select(tab, false); });

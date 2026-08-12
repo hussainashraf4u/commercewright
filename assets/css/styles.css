@@ -1550,80 +1550,8 @@ a {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--s-5);
-}
-
-/* Drawing plate — a title block, not a fake portrait. Drop a real photo in
-   here later and the framing still works. */
-.person__plate {
-  position: relative;
-  display: grid;
-  place-items: center;
-  aspect-ratio: 1 / 1;
-  border: var(--hair) solid var(--line-faint);
-  border-radius: var(--r-sm);
-  background:
-    linear-gradient(var(--grid-line) var(--hair), transparent var(--hair)) 0 0 / 100% 20px,
-    linear-gradient(90deg, var(--grid-line) var(--hair), transparent var(--hair)) 0 0 / 20px 100%,
-    var(--field);
-  overflow: hidden;
-  transition: border-color var(--d-mid) var(--e-out);
-}
-
-.person:hover .person__plate {
-  border-color: var(--accent);
-}
-
-.person__plate b {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: clamp(1.75rem, 1.1rem + 1.8vw, 2.375rem);
-  letter-spacing: 0.06em;
-  color: var(--ink-3);
-  transition: color var(--d-mid) var(--e-out);
-}
-
-.person:hover .person__plate b {
-  color: var(--accent);
-}
-
-.person__plate i {
-  position: absolute;
-  left: 10px;
-  bottom: 8px;
-  font-style: normal;
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-sm);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  opacity: 0.7;
-}
-
-/* registration ticks, one per corner */
-.person__plate::before,
-.person__plate::after {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border: var(--hair) solid var(--line);
-  opacity: 0.55;
-}
-
-.person__plate::before {
-  top: 8px;
-  left: 8px;
-  border-right: 0;
-  border-bottom: 0;
-}
-
-.person__plate::after {
-  top: 8px;
-  right: 8px;
-  border-left: 0;
-  border-bottom: 0;
 }
 
 .person h3 {
@@ -1631,7 +1559,6 @@ a {
   font-size: var(--t-h4);
   font-weight: 600;
   letter-spacing: -0.015em;
-  margin-top: var(--s-4);
 }
 
 .person__role {
@@ -2020,6 +1947,7 @@ a {
 }
 
 .form__done {
+  display: block;
   font-family: var(--font-mono);
   font-size: var(--t-mono);
   letter-spacing: 0.08em;
@@ -2319,30 +2247,6 @@ a {
   .people__grid {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--s-6);
-  }
-
-  .person {
-    display: grid;
-    grid-template-columns: 84px minmax(0, 1fr);
-    gap: var(--s-2) var(--s-4);
-    align-items: start;
-  }
-
-  .person__plate {
-    grid-row: span 2;
-  }
-
-  .person__plate i {
-    display: none;
-  }
-
-  .person h3 {
-    margin-top: 0;
-  }
-
-  .person__bio {
-    grid-column: 1 / -1;
-    margin-top: var(--s-3);
   }
 
   .band__grid {
