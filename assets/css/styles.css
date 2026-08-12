@@ -1377,13 +1377,33 @@ a {
    06 · proof
    ========================================================================== */
 .proof__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  align-items: stretch;
   gap: var(--s-5);
-  align-items: start;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--gutter);
+  margin-inline: calc(var(--gutter) * -1);
+  padding-inline: var(--gutter);
+  padding-bottom: var(--s-4);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-faint) transparent;
+}
+
+.proof__grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.proof__grid::-webkit-scrollbar-thumb {
+  background: var(--line-faint);
+  border-radius: var(--r-md);
 }
 
 .case {
+  flex: 0 0 clamp(280px, 34vw, 400px);
+  scroll-snap-align: start;
   border: var(--hair) solid var(--line-faint);
   border-radius: var(--r-md);
   padding: clamp(20px, 2.2vw, 32px);
@@ -1393,14 +1413,6 @@ a {
 
 .case:hover {
   border-color: var(--line);
-}
-
-.proof__grid .case:nth-child(2) {
-  margin-top: clamp(0px, 3vw, 40px);
-}
-
-.proof__grid .case:nth-child(3) {
-  margin-top: clamp(0px, 6vw, 80px);
 }
 
 .case__meta {
@@ -1960,6 +1972,15 @@ a {
   display: none;
 }
 
+.form__done--err {
+  color: var(--mark);
+  border-left-color: var(--mark);
+}
+
+.form__done--err a {
+  color: inherit;
+}
+
 /* ==========================================================================
    12 · footer
    ========================================================================== */
@@ -2104,17 +2125,8 @@ a {
     flex: none;
   }
 
-  .proof__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .proof__grid .case:nth-child(2) {
-    margin-top: 0;
-  }
-
-  .proof__grid .case:nth-child(3) {
-    margin-top: 0;
-    grid-column: span 2;
+  .case {
+    flex-basis: clamp(260px, 60vw, 400px);
   }
 
   .people__grid {
@@ -2236,12 +2248,8 @@ a {
     margin-left: 0;
   }
 
-  .proof__grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .proof__grid .case:nth-child(3) {
-    grid-column: auto;
+  .case {
+    flex-basis: 82vw;
   }
 
   .people__grid {

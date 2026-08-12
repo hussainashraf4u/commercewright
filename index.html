@@ -72,7 +72,6 @@
     "@type": "PostalAddress",
     "addressLocality": "Bengaluru",
     "addressRegion": "Karnataka",
-    "streetAddress": "HSR Layout",
     "addressCountry": "IN"
   },
   "contactPoint": {
@@ -178,7 +177,7 @@
       <div class="shell hero__inner">
         <div class="hero__copy">
           <p class="label label--accent">
-            <span class="tick"></span>Est. 2025 &nbsp;/&nbsp; HSR Layout, Bengaluru, Karnataka
+            <span class="tick"></span>Est. 2025 &nbsp;/&nbsp; Bengaluru, Karnataka
           </p>
 
           <h1 class="hero__h1 js-split">The demo always works.</h1>
@@ -938,11 +937,12 @@
           <ul class="contact__direct reveal">
             <li><span class="label">Direct</span> <a href="mailto:admin@commercewright.com">admin@commercewright.com</a>
             </li>
-            <li><span class="label">Bengaluru</span> HSR Layout, Bengaluru, Karnataka</li>
+            <li><span class="label">Bengaluru</span> Bengaluru, Karnataka</li>
           </ul>
         </div>
 
-        <form class="form reveal" id="reviewForm" novalidate>
+        <form class="form reveal" id="reviewForm" novalidate action="https://formspree.io/f/mzepggwb" method="POST">
+          <input type="hidden" name="_subject" value="New engineering review request — commercewright.com">
           <p class="form__title label">Request an engineering review</p>
 
           <div class="field">
@@ -994,6 +994,8 @@
             same afternoon.</p>
           <output class="form__done" id="formDone" hidden>Sent. You'll hear from the architect or delivery
             lead, not a sequence.</output>
+          <output class="form__done form__done--err" id="formErr" hidden>Didn't go through. Email
+            <a href="mailto:admin@commercewright.com">admin@commercewright.com</a> directly.</output>
         </form>
       </div>
     </section>

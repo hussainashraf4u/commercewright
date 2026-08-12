@@ -138,28 +138,37 @@
   })();
 
   /* --------------------------------------------------------------------
-     Form — client-side validation only; no backend wired up
+     Form — client-side validation, then AJAX submit to Formspree
      -------------------------------------------------------------------- */
   (function form() {
     var f = document.getElementById('reviewForm');
     if (!f) return;
     var done = document.getElementById('formDone');
+    var err = document.getElementById('formErr');
+    var submitBtn = f.querySelector('button[type="submit"]');
 
     function fail(input, msg) {
       var field = input.closest('.field');
-      var err = field && field.querySelector('.field__err');
+      var fieldErr = field && field.querySelector('.field__err');
       field && field.classList.add('is-bad');
-      if (err) err.textContent = msg;
+      if (fieldErr) fieldErr.textContent = msg;
     }
     function clear(input) {
       var field = input.closest('.field');
-      var err = field && field.querySelector('.field__err');
+      var fieldErr = field && field.querySelector('.field__err');
       field && field.classList.remove('is-bad');
-      if (err) err.textContent = '';
+      if (fieldErr) fieldErr.textContent = '';
+    }
+    function reveal(el) {
+      el.hidden = false;
+      if (animate) gsap.fromTo(el, { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out' });
     }
 
     f.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (done) done.hidden = true;
+      if (err) err.hidden = true;
+
       var required = f.querySelectorAll('[required]');
       var firstBad = null;
 
@@ -178,11 +187,24 @@
       if (firstBad) { firstBad.focus(); return; }
 
       f.querySelectorAll('.field').forEach(function (fl) { fl.classList.remove('is-bad'); });
-      if (done) {
-        done.hidden = false;
-        if (animate) gsap.fromTo(done, { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out' });
-      }
-      f.reset();
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(f.action, {
+        method: 'POST',
+        body: new FormData(f),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          if (done) reveal(done);
+          f.reset();
+        } else if (err) {
+          reveal(err);
+        }
+      }).catch(function () {
+        if (err) reveal(err);
+      }).then(function () {
+        if (submitBtn) submitBtn.disabled = false;
+      });
     });
 
     Array.prototype.forEach.call(f.querySelectorAll('input, select, textarea'), function (input) {
